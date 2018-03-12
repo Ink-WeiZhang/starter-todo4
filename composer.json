@@ -1,0 +1,13 @@
+{
+    "name": "jeremy/starter-todo4",
+    "authors": [
+        {
+            "name": "Jeremy Wildsmith",
+            "email": "Jeremywildsmith@yahoo.ca"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^6"
+    }
+}

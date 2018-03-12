@@ -13,6 +13,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - First Mate - Lu She
 - Second Mate - Wei Zhang
 
+## [1.2] - 2018-03-11
+### Added
+* Finished travis-ci implementation. Added build status
+
+
+## [1.1] - 2018-03-10
+### Added
+* Completed Job 2: Task Entity Class and make test folder
+
+
+## [1.1] - 2018-03-07
+### Added
+* Added composer, added phpunit as dependency
+
 ## [1.0] - 2018-03-04
 ### Added
 * Completed job #11
