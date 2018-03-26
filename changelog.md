@@ -43,7 +43,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## [1.1] - 2018-03-10
 ### Added
 * Completed Job 2: Task Entity Class and make test folder
-
+* Resolved typo in tasks xml data causing issues with data loading
+* Implementing storing via XML document
+* Resolved issue with loading data where CSV data was loaded instead of xml data
 
 ## [1.1] - 2018-03-07
 ### Added
