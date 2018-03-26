@@ -13,6 +13,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - First Mate - Lu She
 - Second Mate - Wei Zhang
 
+## [1.5] - 2018-3-25
+### Added
+* loading() in Task.php
+### Changed
+* tasks.xml
+* Task.php
+* Updated changelog
+
 ## [1.4] - 2018-3-21
 ### Added
 * XML Data
