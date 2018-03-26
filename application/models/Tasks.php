@@ -16,6 +16,25 @@ class Tasks extends XML_Model {
         $this->CI = &get_instance();
     }
 
+    protected function store() {
+        $root = new SimpleXMLElement("<root></root>");
+
+        foreach($this->all() as $t) {
+            $n = $root->addChild("task");
+            $n->addChild("id", $t->id);
+            $n->addChild("task", $t->task);
+            $n->addChild("priority", $t->priority);
+            $n->addChild("size", $t->size);
+            $n->addChild("group", $t->group);
+            $n->addChild("deadline", $t->deadline);
+            $n->addChild("status", $t->status);
+            $n->addChild("flag", $t->flag);
+        }
+
+        $root->saveXML($this->_origin);
+
+    }
+
     protected function load() {
         if (($tasks = simplexml_load_file($this->_origin)) !== FALSE)
         {
@@ -27,7 +46,7 @@ class Tasks extends XML_Model {
             foreach ($tasks->task as $one) {
                 $record = new stdClass();
                 $record->id = (int) $one->id;
-                $record->task = (string) $one->desc;
+                $record->task = (string) $one->task;
                 $record->priority = (int) $one->priority;
                 $record->size = (int) $one->size;
                 $record->group = (int) $one->group;
@@ -41,7 +60,7 @@ class Tasks extends XML_Model {
         }
         // rebuild the keys table
         $this->reindex();
-        parent::load();
+        //parent::load();
     }
 
     function getCategorizedTasks()
